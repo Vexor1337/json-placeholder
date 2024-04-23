@@ -9,6 +9,7 @@ import com.porek.ports.input.projection.PlaceholderPostProjection
 import com.porek.ports.input.service.PlaceholderService
 import com.porek.ports.output.PlaceholderApiClient
 import com.porek.ports.output.PostsRepository
+import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 
 @Service
@@ -20,7 +21,10 @@ class PlaceholderServiceImpl(
         placeholderApiClient.getAllPosts().fold(
             { it.left() },
             {
-                postsRepository.saveAllPosts(it).flatMap { it.map { it.toProjection() }.right() }
+                logger.atInfo().log("sraka")
+                postsRepository.saveAllPosts(it).flatMap { it.map { it.toProjection() }.right()  }
             }
         )
 }
+
+private val logger = LoggerFactory.getLogger(PlaceholderServiceImpl::class.java)

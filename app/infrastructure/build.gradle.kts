@@ -39,6 +39,8 @@ dependencies {
     implementation(group = "io.github.openfeign", name = "feign-okhttp", version = "12.4")
     implementation(group = "io.github.openfeign", name = "feign-slf4j", version = "12.4")
 
+
+    testImplementation("io.mockk:mockk:1.9.3")
     implementation(group = "com.fasterxml.jackson.core", name ="jackson-databind", version="2.16.0" )
 
 

@@ -20,7 +20,7 @@ class PlaceholderApiClientAdapter(private val placeholderFeignClient: Placeholde
             when (e) {
                 is FeignException.Unauthorized -> PlaceholderUnauthorizedException()
                 is FeignException.NotFound -> PageNotFoundError()
-                else -> PlaceholderGenericException(e.message!!)
+                else -> PlaceholderGenericException(e.message ?: "Unknown error")
             }
         }
 }

@@ -19,12 +19,11 @@ fun PlaceholderError.toException(status: HttpStatus = HttpStatus.BAD_REQUEST) =
     PlaceholderEitherException(eitherError = this, status = status)
 
 @RestControllerAdvice(
-    basePackages = ["com.porek.app.intrfaces"]
+    basePackages = ["com.porek.app.intdrfaces"]
 )
 
 @Order(100)
 class PlaceholderControllerExceptionHandler {
-    private val logger = LoggerFactory.getLogger(PlaceholderControllerExceptionHandler::class.java)
 
     @ExceptionHandler(PlaceholderEitherException::class)
     fun handleRuntimeException(exception: PlaceholderEitherException): ResponseEntity<ErrorResponseWrapper> =

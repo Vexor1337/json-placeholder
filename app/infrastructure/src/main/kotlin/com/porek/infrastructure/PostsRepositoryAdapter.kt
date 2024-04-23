@@ -19,6 +19,6 @@ class PostsRepositoryAdapter : PostsRepository {
                 File(fileName).writeText(mapper.writeValueAsString(postsList))
             }
              postsList
-        }.mapLeft { PostRepoGenericError(it.message!!) }
+        }.mapLeft { PostRepoGenericError(it.message ?: "Unknown Error") }
     }
 }

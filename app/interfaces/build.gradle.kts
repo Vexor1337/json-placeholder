@@ -37,6 +37,9 @@ dependencies {
 
     implementation(group = "io.arrow-kt", name = "arrow-core", version = "1.2.1")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("io.mockk:mockk:1.9.3")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
 }
 
 tasks.withType<KotlinCompile> {
@@ -53,3 +56,4 @@ tasks.withType<Test> {
 tasks.getByName<Jar>("jar") {
     archiveFileName.set("interfaces.jar")
 }
+
