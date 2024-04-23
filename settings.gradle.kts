@@ -1,4 +1,4 @@
-rootProject.name = "jsonplaceholder"
+rootProject.name = "json-placeholder"
 
 include(
     "app:application",
@@ -8,4 +8,4 @@ include(
     "app:ports-output",
     "config",
     "app:commons"
-    )
+)

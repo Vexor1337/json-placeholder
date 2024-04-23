@@ -21,10 +21,7 @@ class PlaceholderServiceImpl(
         placeholderApiClient.getAllPosts().fold(
             { it.left() },
             {
-                logger.atInfo().log("sraka")
                 postsRepository.saveAllPosts(it).flatMap { it.map { it.toProjection() }.right()  }
             }
         )
 }
-
-private val logger = LoggerFactory.getLogger(PlaceholderServiceImpl::class.java)

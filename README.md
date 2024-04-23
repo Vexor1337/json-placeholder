@@ -1,4 +1,4 @@
-# Repo-viewer
+# json-placeholder
 Application that uses the jsonplaceholder API to save posts to separate files.
 
 ### Description
