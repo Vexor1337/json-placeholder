@@ -22,3 +22,5 @@ class PostsRepositoryAdapter : PostsRepository {
         }.mapLeft { PostRepoGenericError(it.message ?: "Unknown Error") }
     }
 }
+
+

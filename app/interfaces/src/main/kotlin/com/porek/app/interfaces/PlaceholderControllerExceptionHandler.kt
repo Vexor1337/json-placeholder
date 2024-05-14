@@ -19,7 +19,7 @@ fun PlaceholderError.toException(status: HttpStatus = HttpStatus.BAD_REQUEST) =
     PlaceholderEitherException(eitherError = this, status = status)
 
 @RestControllerAdvice(
-    basePackages = ["com.porek.app.intdrfaces"]
+    basePackages = ["com.porek.app.interfaces"]
 )
 
 @Order(100)
