@@ -1,7 +1,4 @@
 import arrow.core.right
-import com.porek.app.interfaces.PlaceholderController
-import com.porek.ports.input.projection.PlaceholderPostProjection
-import com.porek.ports.input.service.PlaceholderService
 import io.mockk.every
 import io.mockk.mockk
 import org.junit.jupiter.api.Assertions.assertEquals

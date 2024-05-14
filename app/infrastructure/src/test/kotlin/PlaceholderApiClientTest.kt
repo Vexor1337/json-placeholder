@@ -1,8 +1,4 @@
 import arrow.core.getOrElse
-import arrow.core.right
-import com.porek.infrastructure.PlaceholderApiClientAdapter
-import com.porek.infrastructure.client.PlaceholderFeignClient
-import com.porek.ports.output.persistance.PlaceholderPostDto
 import io.mockk.every
 import io.mockk.mockk
 import org.junit.jupiter.api.Assertions.assertEquals

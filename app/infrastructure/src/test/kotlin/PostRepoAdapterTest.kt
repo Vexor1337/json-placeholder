@@ -1,7 +1,5 @@
 import arrow.core.getOrElse
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.porek.infrastructure.PostsRepositoryAdapter
-import com.porek.ports.output.persistance.PlaceholderPostDto
 import io.mockk.every
 import io.mockk.mockk
 import org.junit.jupiter.api.Assertions.assertEquals
